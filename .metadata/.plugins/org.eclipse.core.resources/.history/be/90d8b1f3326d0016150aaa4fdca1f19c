@@ -1,0 +1,41 @@
+import java.lang.*;
+
+
+public class StreamReader {
+
+	private int cp;
+	
+	StreamReader (int codePoint) {
+		cp = codePoint;
+		System.out.println(cp);
+	};
+	
+	public char[] something() {
+		// create an int primitive cp and assign value
+		int cp = 0x0036;
+	
+		// create an int primitive res
+		int res;
+	
+		/**
+		 *  create a char array dst and assign UTF-16 value of cp
+		 *  to it using toChars method
+		 */
+		char dst[] = Character.toChars(cp);
+	
+		// check if cp is BMP or supplementary code point using toChars
+		res = Character.toChars(cp, dst, 0);
+	
+		String str1 = "It is a BMP code point";
+		String str2 = "It is a is a supplementary code point";
+	
+		// print res value
+		if ( res == 1 ){
+			System.out.println( str1 );
+		} else if ( res == 2 ){
+			System.out.println( str2 );
+		}
+		
+		return dst;
+	}
+}

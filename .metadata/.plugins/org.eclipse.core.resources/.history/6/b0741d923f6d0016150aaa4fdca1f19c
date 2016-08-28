@@ -1,0 +1,28 @@
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.*;
+import java.util.ArrayList;
+
+public class StreamReader {
+
+	private int cp;
+	char[] dst = new char[10];
+
+//	StreamReader (int codePoint) {
+//		cp = codePoint;
+//		dst = Character.toChars(cp);
+//		System.out.println("cp is -" + cp);
+//	};
+	
+	public char[] releaser(byte[] stream) throws IOException {
+		InputStream is = new ByteArrayInputStream(stream);
+		for(int i = 0; i < stream.length; i++) {
+			System.out.println(stream[i]);
+			Character.toChars(is.read(), dst, i);
+		}
+		
+		return dst;
+	}
+	
+}

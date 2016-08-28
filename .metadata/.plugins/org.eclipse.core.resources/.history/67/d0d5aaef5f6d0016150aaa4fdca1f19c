@@ -1,0 +1,19 @@
+import java.io.IOException;
+import java.nio.charset.Charset;
+
+public class run {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String string = "hola mundo";
+		byte[] b = string.getBytes(Charset.forName("UTF-8"));
+		try {
+			StreamReader sr = new StreamReader();
+			System.out.println(sr.releaser(b));
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+
+}

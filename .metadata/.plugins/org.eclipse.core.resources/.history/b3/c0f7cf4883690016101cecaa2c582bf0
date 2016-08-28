@@ -1,0 +1,21 @@
+package threads;
+
+import java.util.concurrent.Executor;
+
+// Threads
+
+public class Foo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Runnable r = () -> System.out.println("hola mundo");
+		
+		// Le doy un runable y lo ejecuta
+		Executor e = (command) -> command.run();
+	
+		e.execute(r);
+		e.execute(r);
+		e.execute(r);
+	}
+
+}

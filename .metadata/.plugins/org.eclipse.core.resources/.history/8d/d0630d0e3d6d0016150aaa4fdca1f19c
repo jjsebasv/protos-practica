@@ -1,0 +1,21 @@
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class run {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		byte[] b = null;
+		InputStream is = new ByteArrayInputStream(b);
+		try {
+			int a;
+			a = is.read();
+			System.out.println(a);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

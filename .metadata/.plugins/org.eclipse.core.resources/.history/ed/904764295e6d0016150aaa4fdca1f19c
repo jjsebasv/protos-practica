@@ -1,0 +1,38 @@
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.util.Date;
+import java.util.function.Consumer;
+
+public class Logger implements Log {
+	
+	@Override
+	public void warning(String msg) {
+		// TODO Auto-generated method stub
+		createMessage(msg, Level.warning);
+	}
+
+	@Override
+	public void info(String msg) {
+		// TODO Auto-generated method stub
+		createMessage(msg, Level.info);
+	}
+	
+	private void createMessage (String msg, Level lvl) throws IOException {
+		Message m = new mFile(msg, lvl, new Date());
+		DataOutputStream os = new DataOutputStream(new FileOutputStream("file.txt"));
+		os.writeBytes(m.toString());
+		os.close();
+	}
+
+	@Override
+	public void read(InputStream input, Consumer<Message> consumer) {
+		// TODO Auto-generated method stub
+	}
+
+}

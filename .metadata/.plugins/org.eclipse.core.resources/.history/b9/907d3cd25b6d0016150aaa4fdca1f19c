@@ -1,0 +1,31 @@
+import java.io.InputStream;
+import java.util.Date;
+import java.util.function.Consumer;
+
+public class Logger implements Log {
+	
+	@Override
+	public void warning(String msg) {
+		// TODO Auto-generated method stub
+		createMessage(msg, Level.warning);
+	}
+
+	@Override
+	public void info(String msg) {
+		// TODO Auto-generated method stub
+		createMessage(msg, Level.info);
+	}
+	
+	private void createMessage (String msg, Level lvl) {
+		Message m = new mFile(msg, lvl, new Date());
+		OutputStream out = new FileOutputStream(new File("logs"));
+		out.write();
+		out.close();
+	}
+
+	@Override
+	public void read(InputStream input, Consumer<Message> consumer) {
+		// TODO Auto-generated method stub
+	}
+
+}

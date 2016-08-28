@@ -1,0 +1,16 @@
+
+public class run {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StreamReader sr = new StreamReader(0x006f);
+		sr.something();
+		int cp = "\u041f".codePointAt(0);
+		System.out.println("gilada.."+cp);
+		StreamReader sr2 = new StreamReader(cp);
+		
+		byte[] b = new byte[] { (byte)0xe0, 0x4f, (byte)0xd0, 0x20, (byte)0xea, 0x3a, 0x69, 0x10, (byte)0xa2, (byte)0xd8, 0x08, 0x00, 0x2b, 0x30, 0x30, (byte)0x9d };
+		sr2.releaser(b);
+	}
+
+}

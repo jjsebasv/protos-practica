@@ -1,0 +1,14 @@
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
+public class run {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//InputStream is = new ByteArrayInputStream();
+		InputStream is;
+		int a = is.read();
+		System.out.println(a);
+	}
+
+}

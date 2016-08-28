@@ -1,0 +1,12 @@
+
+public class run {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StreamReader sr = new StreamReader(0x006f);
+		sr.something();
+		int cp = "\u041f".codePointAt(0);
+		System.out.println("gilada.."+cp);
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class run {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StreamReader sr = new StreamReader(0x006f);
+		sr.something();
+	}
+
+}
